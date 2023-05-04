@@ -2,33 +2,19 @@
 
 Week 4 focused on smart contracts and Hardhat.
 
-App deployed on Goerli Testnet. Etherscan URL:
-Contract Address:
-
 ## Functionality and Features Added to the Project
 
 -   Added conversion from wei to ether in App.js, so that users do not have to enter the deposit amount in Wei.
 -   Added a Previous Approved Contracts Lookup section so users can search old approved contracts by address. This functionality only works if the page is not refreshed.
 -   Added an onlyArbiter modifier and refactored the approve() function.
--   Added a `changeArbiter()` function that lets the arbiter give contract approval rights to another person or entity. This functionality is not accessible via the front end, only via direct call to a node or the Etherscan contract page.
+-   Added a `changeArbiter()` function that lets the arbiter give contract approval rights to another person or entity. This functionality is only in the Escrow.sol as of now.
 -   Added a new Event to emit when `changeArbiter()` is successfully executed.
 -   Added tests to make sure onlyArbiter modifer and `changeArbiter()` functions are working properly. All passing. (Had to hardcode in some addresses due to ethers getSigners() returning an object without an address.)
-
-arbiter: 0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC
-beneficiary: 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
-depositer: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
-newArbiter: 0x90F79bf6EB2c4f870365E785982E1f101E93b906
-
-Prev contract address: 0x5fbdb2315678afecb367f032d93f642f64180aa3
 
 ## Learnings
 
 -   Learned what the React.StrictMode wrapper does and is: for catching errors/bugs in development. To be removed in production.
 -   You can pass a function into a Javascript object's key-value pair and shuttle that around a React app.... Mind. Blown.
-
-Screenshot of App (with one of the Kraken Exchange wallets as an example address):
-
-![Alt text](src/ExplorerScreenshot.png)
 
 # Original Decentralized Escrow Application Project Instructions from Alchemy
 
